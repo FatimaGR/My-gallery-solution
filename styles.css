@@ -1,36 +1,123 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
 
+:root {
+  --gray-1: #4E5150;
+  --gray-2: #A9A9A9;
+  --gray-3: #B9BDCF;
+  --gray-4: #BDBDBD;
+  --gray-5: #E5E5E5;
+  --green: #02801C;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  padding: 5% 17% 2% 17%;
 }
 
-ul {
-  padding-left: 24px;
+.profile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  /* margin-bottom: 10%; */
+}
+.profile img{
+  width: 156px;
+  height: 156px;
+  border-radius: 16px;
+}
+.profile h3{
+  font-size: 24px;
+  color: var(--gray-1);
+}
+.profile .ubication{
+  font-size: 14px;
+  color: var(--gray-2);
+}
+.information{
+  display: flex;
+  gap: 20px;
+}
+.information .card{
+  width: 100px;
+  padding: 15px;
+  background-color: var(--gray-5);
+  border-radius: 12px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.card .number{
+  font-size: 18px;
+  color: var(--gray-1);
+}
+.card .subtitle{
+  font-size: 14px;
+  color: var(--gray-4);
 }
 
-li {
-  margin-bottom: 8px;
+.gallery{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3%;
+  margin: 15% 0;
+}
+.gallery img{
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0px 4px 6px 0px #00000026;
+}
+.gallery img:nth-child(2),
+.gallery img:nth-child(3){
+  grid-column-start: span 2;
+}
+.gallery img:nth-child(4){
+  grid-row-start: span 2;
 }
 
-.welcome {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.welcome-text {
-  margin-top: 30vh;
+footer p{
+  text-align: center;
   font-weight: 500;
+  font-size: 14px;
+  color: var(--gray-3);
+}
+footer a{
+  font-weight: 700;
+  color: var(--gray-3);
+}
+footer a:hover{
+  color: var(--green);
 }
 
-.welcome-text p {
-  font-size: 1rem;
-  font-weight: 400;
-}
-
-.welcome-text h1 {
-  font-size: 1.5rem;
-}
-
-.welcome-text a {
-  color: #f7542e;
+@media (max-width: 700px){
+  body{
+    padding: 7% 4%;
+  }
+  .profile{
+    margin-bottom: 6%;
+  }
+  .profile img{
+    width: 101px;
+    height: 101px;
+  }
+  .profile h3{
+    font-size: 14px;
+  }
+  .profile .ubication{
+    font-size: 10px;
+  }
+  .information .card{
+    width: 78px;
+    padding: 10px;
+  }
+  .information .number,
+  .information .subtitle{
+    font-size: 12px;
+  }
 }
