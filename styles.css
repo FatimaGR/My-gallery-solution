@@ -1,12 +1,14 @@
+/* general styles and variables */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
 
 :root {
   --gray-1: #4E5150;
   --gray-2: #A9A9A9;
   --gray-3: #B9BDCF;
-  --gray-4: #BDBDBD;
-  --gray-5: #E5E5E5;
-  --green: #02801C;
+  --gray-4: #6060609f;
+  --purple: #4400ff3e;
+  --purple-1: #f2e7ff;
+  --pink: #F072C6;
 }
 
 *{
@@ -18,18 +20,18 @@ body {
   font-weight: 600;
   padding: 5% 17% 2% 17%;
 }
-
+/* profile */
 .profile{
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  /* margin-bottom: 10%; */
 }
 .profile img{
   width: 156px;
   height: 156px;
   border-radius: 16px;
+  border: 3px solid var(--purple);
 }
 .profile h3{
   font-size: 24px;
@@ -46,7 +48,7 @@ body {
 .information .card{
   width: 100px;
   padding: 15px;
-  background-color: var(--gray-5);
+  background-color: var(--purple-1);
   border-radius: 12px;
   text-align: center;
   box-sizing: border-box;
@@ -59,7 +61,7 @@ body {
   font-size: 14px;
   color: var(--gray-4);
 }
-
+/* gallery */
 .gallery{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -80,7 +82,7 @@ body {
 .gallery img:nth-child(4){
   grid-row-start: span 2;
 }
-
+/* footer */
 footer p{
   text-align: center;
   font-weight: 500;
@@ -92,7 +94,7 @@ footer a{
   color: var(--gray-3);
 }
 footer a:hover{
-  color: var(--green);
+  color: var(--pink);
 }
 
 @media (max-width: 700px){
